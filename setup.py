@@ -9,7 +9,7 @@ __version__ ="0.0.0"
 REPO_NAME= "End-to-end-MLProject"
 AUTHOR_USER_NAME = "suzzane123"
 SRC_REPO ="mlProject"
-AUTHOR_EMAIL= "momsryder8@icloud..com"
+AUTHOR_EMAIL= "momsryder8@icloud.com"
 
 setuptools.setup(
     name = SRC_REPO,

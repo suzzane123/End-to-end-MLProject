@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+end_to_end_mlproject.egg-info/PKG-INFO
+end_to_end_mlproject.egg-info/SOURCES.txt
+end_to_end_mlproject.egg-info/dependency_links.txt
+end_to_end_mlproject.egg-info/requires.txt
+end_to_end_mlproject.egg-info/top_level.txt

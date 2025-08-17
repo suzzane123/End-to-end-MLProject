@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: mlProject
+Version: 0.0.0
+Summary: A small python package for App
+Home-page: https://github.com/suzzane123/End-to-end-MLProject
+Author: suzzane123
+Author-email: momsryder8@icloud..com
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: summary
+
+# End-to-end-MLProject
+This is Wine quality testing machine learning project

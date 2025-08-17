@@ -2,8 +2,7 @@ import os
 from pathlib import Path
 import setuptools
 
-with open("README.md", "r", encoding="utf-8") as fh:
-    long_description = fh.read()
+readme_path = Path("README.md").read_text()
 __version__ ="0.0.0"
 
 REPO_NAME= "End-to-end-MLProject"
@@ -17,7 +16,7 @@ setuptools.setup(
     author = AUTHOR_USER_NAME,
     author_email= AUTHOR_EMAIL,
     description="A small python package for App",
-    long_description=long_description,
+    long_description=readme_path,
     long_description_content_type="text/markdown", 
     url=f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",
     package_dir={"":"src"}, 

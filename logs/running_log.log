@@ -1,0 +1,274 @@
+[2025-08-22 11:26:59,154: INFO: main: Data Ingestion stage started.]
+[2025-08-22 11:26:59,155: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-22 11:26:59,156: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-22 11:26:59,157: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-22 11:26:59,157: INFO: common: created directory at: artifacts]
+[2025-08-22 11:26:59,157: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-22 11:26:59,158: ERROR: stage_01_data_ingestion: Error occurred in Data Ingestion stage: "'ConfigBox' object has no attribute 'local_data_file'"]
+Traceback (most recent call last):
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'local_data_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'local_data_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+AttributeError: 'ConfigBox' object has no attribute 'local_data_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/config_box.py", line 28, in __getattr__
+    return super().__getattr__(item)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'local_data_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'local_data_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'local_data_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+AttributeError: 'ConfigBox' object has no attribute 'local_data_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/pipeline/stage_01_data_ingestion.py", line 15, in main
+    data_ingestion_config = config.get_data_ingestion_config()
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/config/configuration.py", line 23, in get_data_ingestion_config
+    local_data_file=Path(config.local_data_file),
+                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/config_box.py", line 30, in __getattr__
+    return super().__getattr__(item.lower())
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'local_data_file'"
+[2025-08-22 11:26:59,162: ERROR: main: Error in Data Ingestion stage: "'ConfigBox' object has no attribute 'local_data_file'"]
+Traceback (most recent call last):
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'local_data_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'local_data_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+AttributeError: 'ConfigBox' object has no attribute 'local_data_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/config_box.py", line 28, in __getattr__
+    return super().__getattr__(item)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'local_data_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'local_data_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'local_data_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+AttributeError: 'ConfigBox' object has no attribute 'local_data_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/main.py", line 9, in <module>
+    obj.main()
+    ~~~~~~~~^^
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/pipeline/stage_01_data_ingestion.py", line 22, in main
+    raise e
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/pipeline/stage_01_data_ingestion.py", line 15, in main
+    data_ingestion_config = config.get_data_ingestion_config()
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/config/configuration.py", line 23, in get_data_ingestion_config
+    local_data_file=Path(config.local_data_file),
+                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/config_box.py", line 30, in __getattr__
+    return super().__getattr__(item.lower())
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'local_data_file'"
+[2025-08-22 11:37:00,648: INFO: main: Data Ingestion stage started.]
+[2025-08-22 11:37:00,650: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-22 11:37:00,650: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-22 11:37:00,651: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-22 11:37:00,652: INFO: common: created directory at: artifacts]
+[2025-08-22 11:37:00,652: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-22 11:37:00,652: ERROR: stage_01_data_ingestion: Error occurred in Data Ingestion stage: "'ConfigBox' object has no attribute 'local_data_file'"]
+Traceback (most recent call last):
+  File "box/box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'local_data_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 633, in box.box.Box.__getattr__
+  File "box/box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'local_data_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'local_data_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'local_data_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'local_data_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 633, in box.box.Box.__getattr__
+  File "box/box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'local_data_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'local_data_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/pipeline/stage_01_data_ingestion.py", line 15, in main
+    data_ingestion_config = config.get_data_ingestion_config()
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/config/configuration.py", line 23, in get_data_ingestion_config
+    local_data_file=Path(config.local_data_file),
+                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "box/config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'local_data_file'"
+[2025-08-22 11:37:00,654: ERROR: main: Error in Data Ingestion stage: "'ConfigBox' object has no attribute 'local_data_file'"]
+Traceback (most recent call last):
+  File "box/box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'local_data_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 633, in box.box.Box.__getattr__
+  File "box/box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'local_data_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'local_data_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'local_data_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'local_data_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 633, in box.box.Box.__getattr__
+  File "box/box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'local_data_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'local_data_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/main.py", line 9, in <module>
+    obj.main()
+    ~~~~~~~~^^
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/pipeline/stage_01_data_ingestion.py", line 22, in main
+    raise e
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/pipeline/stage_01_data_ingestion.py", line 15, in main
+    data_ingestion_config = config.get_data_ingestion_config()
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/config/configuration.py", line 23, in get_data_ingestion_config
+    local_data_file=Path(config.local_data_file),
+                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "box/config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'local_data_file'"

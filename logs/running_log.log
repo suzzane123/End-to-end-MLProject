@@ -1,0 +1,140 @@
+[2025-08-22 10:20:21,103: INFO: main: Data Ingestion stage started.]
+[2025-08-22 10:20:21,104: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-22 10:20:21,105: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-22 10:20:21,106: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-22 10:20:21,106: INFO: common: created directory at: artifacts]
+[2025-08-22 10:20:21,106: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-22 10:20:21,861: ERROR: stage_01_data_ingestion: Error occurred in Data Ingestion stage: HTTP Error 404: Not Found]
+Traceback (most recent call last):
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/pipeline/stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.download_file()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/components/data_ingestion.py", line 16, in download_file
+    filename, headers = request.urlretrieve(
+                        ~~~~~~~~~~~~~~~~~~~^
+        url=self.config.source_URL,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        filename=self.config.local_data_file
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/urllib/request.py", line 214, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+                            ~~~~~~~^^^^^^^^^^^
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/urllib/request.py", line 189, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/urllib/request.py", line 495, in open
+    response = meth(req, response)
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/urllib/request.py", line 604, in http_response
+    response = self.parent.error(
+        'http', request, response, code, msg, hdrs)
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/urllib/request.py", line 533, in error
+    return self._call_chain(*args)
+           ~~~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/urllib/request.py", line 466, in _call_chain
+    result = func(*args)
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/urllib/request.py", line 613, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+[2025-08-22 10:20:21,869: ERROR: main: Error in Data Ingestion stage: HTTP Error 404: Not Found]
+Traceback (most recent call last):
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/main.py", line 9, in <module>
+    obj.main()
+    ~~~~~~~~^^
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/pipeline/stage_01_data_ingestion.py", line 22, in main
+    raise e
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/pipeline/stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.download_file()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/components/data_ingestion.py", line 16, in download_file
+    filename, headers = request.urlretrieve(
+                        ~~~~~~~~~~~~~~~~~~~^
+        url=self.config.source_URL,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        filename=self.config.local_data_file
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/urllib/request.py", line 214, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+                            ~~~~~~~^^^^^^^^^^^
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/urllib/request.py", line 189, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/urllib/request.py", line 495, in open
+    response = meth(req, response)
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/urllib/request.py", line 604, in http_response
+    response = self.parent.error(
+        'http', request, response, code, msg, hdrs)
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/urllib/request.py", line 533, in error
+    return self._call_chain(*args)
+           ~~~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/urllib/request.py", line 466, in _call_chain
+    result = func(*args)
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/urllib/request.py", line 613, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+[2025-08-22 10:23:57,416: INFO: main: Data Ingestion stage started.]
+[2025-08-22 10:23:57,417: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-22 10:23:57,417: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-22 10:23:57,419: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-22 10:23:57,419: INFO: common: created directory at: artifacts]
+[2025-08-22 10:23:57,419: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-22 10:23:58,575: INFO: data_ingestion: artifacts/data_ingestion/data.zip download with following info: 
+Date: Fri, 22 Aug 2025 04:38:58 GMT
+Content-Type: text/html; charset=utf-8
+Vary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, X-Requested-With,Accept-Encoding, Accept, X-Requested-With
+x-repository-download: git clone https://github.com/suzzane123/End-to-end-MLProject.git
+x-raw-download: https://raw.githubusercontent.com/suzzane123/End-to-end-MLProject/main/winequality-data.zip
+ETag: W/"9c1422b5082eae1b84052902912ccafa"
+Cache-Control: max-age=0, private, must-revalidate
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Referrer-Policy: no-referrer-when-downgrade
+Content-Security-Policy: default-src 'none'; base-uri 'self'; child-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com *.rel.tunnels.api.visualstudio.com wss://*.rel.tunnels.api.visualstudio.com objects-origin.githubusercontent.com copilot-proxy.githubusercontent.com proxy.individual.githubcopilot.com proxy.business.githubcopilot.com proxy.enterprise.githubcopilot.com *.actions.githubusercontent.com wss://*.actions.githubusercontent.com productionresultssa0.blob.core.windows.net/ productionresultssa1.blob.core.windows.net/ productionresultssa2.blob.core.windows.net/ productionresultssa3.blob.core.windows.net/ productionresultssa4.blob.core.windows.net/ productionresultssa5.blob.core.windows.net/ productionresultssa6.blob.core.windows.net/ productionresultssa7.blob.core.windows.net/ productionresultssa8.blob.core.windows.net/ productionresultssa9.blob.core.windows.net/ productionresultssa10.blob.core.windows.net/ productionresultssa11.blob.core.windows.net/ productionresultssa12.blob.core.windows.net/ productionresultssa13.blob.core.windows.net/ productionresultssa14.blob.core.windows.net/ productionresultssa15.blob.core.windows.net/ productionresultssa16.blob.core.windows.net/ productionresultssa17.blob.core.windows.net/ productionresultssa18.blob.core.windows.net/ productionresultssa19.blob.core.windows.net/ github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com wss://alive-staging.github.com api.githubcopilot.com api.individual.githubcopilot.com api.business.githubcopilot.com api.enterprise.githubcopilot.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com copilot-workspace.githubnext.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: blob: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com private-avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com release-assets.githubusercontent.com secured-user-images.githubusercontent.com/ user-images.githubusercontent.com/ private-user-images.githubusercontent.com opengraph.githubassets.com copilotprodattachments.blob.core.windows.net/github-production-copilot-attachments/ github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/ private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com gist.github.com; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/
+Server: github.com
+Accept-Ranges: bytes
+Set-Cookie: _gh_sess=X6lupFEub9fW8Otcc%2B4qROzNpQBt18t7a%2FcCCnGfw%2FXSyWgOS8B1uf09IcjRLEiZOLmBlmO2XcbuOf4i8BD1Z%2FaUOSWxMOQPFeSAx0In%2BXb9GM15fiz%2BOLPt5umwMXyqChyc66UNC0GlMzT6kJtM3%2FBXoSjkBDAOC%2FiMUV3EozCFGy%2F6o%2BMgqeOhohqVD3LbjpAez0BwRLeU7P6xTGcZhW9FSbmeep%2B5xLvipLYbcaIPKq2w14shYvae9B42LHXeKRUo%2BFf%2FEEftvzx4Xy8WWQ%3D%3D--ZtemAVteyTVgN59R--OItQNdUxOohA4nlcI0%2Bd0A%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.1041753706.1755837537; Path=/; Domain=github.com; Expires=Sat, 22 Aug 2026 04:38:57 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Sat, 22 Aug 2026 04:38:57 GMT; HttpOnly; Secure; SameSite=Lax
+X-GitHub-Request-Id: 333A:335A90:E51B:10932:68A7F461
+connection: close
+Transfer-Encoding: chunked
+
+]
+[2025-08-22 10:23:58,576: ERROR: stage_01_data_ingestion: Error occurred in Data Ingestion stage: File is not a zip file]
+Traceback (most recent call last):
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/pipeline/stage_01_data_ingestion.py", line 18, in main
+    data_ingestion.extract_zip_file()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/components/data_ingestion.py", line 34, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+         ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/zipfile/__init__.py", line 1385, in __init__
+    self._RealGetContents()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/zipfile/__init__.py", line 1452, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+[2025-08-22 10:23:58,581: ERROR: main: Error in Data Ingestion stage: File is not a zip file]
+Traceback (most recent call last):
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/main.py", line 9, in <module>
+    obj.main()
+    ~~~~~~~~^^
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/pipeline/stage_01_data_ingestion.py", line 22, in main
+    raise e
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/pipeline/stage_01_data_ingestion.py", line 18, in main
+    data_ingestion.extract_zip_file()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/components/data_ingestion.py", line 34, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+         ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/zipfile/__init__.py", line 1385, in __init__
+    self._RealGetContents()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/zipfile/__init__.py", line 1452, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file

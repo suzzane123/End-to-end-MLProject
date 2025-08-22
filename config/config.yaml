@@ -1,0 +1,7 @@
+artifacts_root: artifacts
+
+data_ingestion:
+  root_rid: artifacts/data_ingenstion
+  source_URL: https://github.com/suzzane123/End-to-end-MLProject/blob/main/winequality-data.zip
+  local_data_file: artifacts/data_ingestion/data.zip
+  unzip_dir: artifacts/data_ingestion

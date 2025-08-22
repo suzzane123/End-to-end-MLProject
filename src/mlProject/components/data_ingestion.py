@@ -25,7 +25,7 @@ class DataIngestion:
     def extract_zip_file(self):
         
         """
-        zip_file_path: str
+        zip_file_path: str add some comment here
         Extracts the zip file into directory
         """
 

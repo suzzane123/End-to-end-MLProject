@@ -1,4 +1,5 @@
 import os
+import requests
 import urllib.request as request
 import zipfile
 from mlProject import logger
@@ -13,7 +14,7 @@ class DataIngestion:
 
     def download_file(self):
         # Check content type first
-        response = request.head(self.config.source_URL)
+        response = requests.head(self.config.source_URL)
         content_type = response.headers.get('Content-Type', '').lower()
         if 'zip' not in content_type and 'octet-stream' not in content_type:
             logger.error(f"Invalid content type: {content_type}. Expected zip or binary.")

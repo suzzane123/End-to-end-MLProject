@@ -1,0 +1,29 @@
+[2025-08-22 12:33:52,794: INFO: main: Data Ingestion stage started.]
+[2025-08-22 12:33:52,795: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-22 12:33:52,797: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-22 12:33:52,798: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-22 12:33:52,798: INFO: common: created directory at: artifacts]
+[2025-08-22 12:33:52,798: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-22 12:33:52,799: ERROR: stage_01_data_ingestion: Error occurred in Data Ingestion stage: module 'urllib.request' has no attribute 'head']
+Traceback (most recent call last):
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/pipeline/stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.download_file()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/components/data_ingestion.py", line 16, in download_file
+    response = request.head(self.config.source_URL)
+               ^^^^^^^^^^^^
+AttributeError: module 'urllib.request' has no attribute 'head'
+[2025-08-22 12:33:52,800: ERROR: main: Error in Data Ingestion stage: module 'urllib.request' has no attribute 'head']
+Traceback (most recent call last):
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/main.py", line 9, in <module>
+    obj.main()
+    ~~~~~~~~^^
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/pipeline/stage_01_data_ingestion.py", line 22, in main
+    raise e
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/pipeline/stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.download_file()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/components/data_ingestion.py", line 16, in download_file
+    response = request.head(self.config.source_URL)
+               ^^^^^^^^^^^^
+AttributeError: module 'urllib.request' has no attribute 'head'

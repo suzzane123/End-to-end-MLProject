@@ -1,0 +1,151 @@
+[2025-08-22 10:13:51,550: INFO: main: Data Ingestion stage started.]
+[2025-08-22 10:13:51,551: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-22 10:13:51,551: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-22 10:13:51,552: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-22 10:13:51,553: ERROR: stage_01_data_ingestion: Error occurred in Data Ingestion stage: "'ConfigBox' object has no attribute 'artifact_root'"]
+Traceback (most recent call last):
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'artifact_root'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'artifact_root'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+AttributeError: 'ConfigBox' object has no attribute 'artifact_root'. Did you mean: 'artifacts_root'?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/config_box.py", line 28, in __getattr__
+    return super().__getattr__(item)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'artifact_root'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'artifact_root'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'artifact_root'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+AttributeError: 'ConfigBox' object has no attribute 'artifact_root'. Did you mean: 'artifacts_root'?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/pipeline/stage_01_data_ingestion.py", line 14, in main
+    config = ConfigurationManager()
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/config/configuration.py", line 15, in __init__
+    create_directories([self.config.artifact_root])
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/config_box.py", line 30, in __getattr__
+    return super().__getattr__(item.lower())
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'artifact_root'". Did you mean: 'artifacts_root'?
+[2025-08-22 10:13:51,555: ERROR: main: Error in Data Ingestion stage: "'ConfigBox' object has no attribute 'artifact_root'"]
+Traceback (most recent call last):
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'artifact_root'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'artifact_root'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+AttributeError: 'ConfigBox' object has no attribute 'artifact_root'. Did you mean: 'artifacts_root'?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/config_box.py", line 28, in __getattr__
+    return super().__getattr__(item)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'artifact_root'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'artifact_root'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'artifact_root'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+AttributeError: 'ConfigBox' object has no attribute 'artifact_root'. Did you mean: 'artifacts_root'?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/main.py", line 9, in <module>
+    obj.main()
+    ~~~~~~~~^^
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/pipeline/stage_01_data_ingestion.py", line 22, in main
+    raise e
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/pipeline/stage_01_data_ingestion.py", line 14, in main
+    config = ConfigurationManager()
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/config/configuration.py", line 15, in __init__
+    create_directories([self.config.artifact_root])
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/config_box.py", line 30, in __getattr__
+    return super().__getattr__(item.lower())
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/sushantthapa/miniconda/envs/mlproj/lib/python3.13/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'artifact_root'". Did you mean: 'artifacts_root'?

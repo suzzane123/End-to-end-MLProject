@@ -64,3 +64,103 @@ Source-Age: 0
 [2025-08-22 12:38:07,563: INFO: data_ingestion: Extracted zip file to artifacts/data_ingestion]
 [2025-08-22 12:38:07,563: INFO: stage_01_data_ingestion: Data Ingestion stage completed successfully.]
 [2025-08-22 12:38:07,563: INFO: main: Data Ingestion stage completed successfully.]
+[2025-08-23 09:16:07,203: INFO: main: Data Ingestion stage started.]
+[2025-08-23 09:16:07,205: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-23 09:16:07,206: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-23 09:16:07,207: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-23 09:16:07,208: INFO: common: created directory at: artifacts]
+[2025-08-23 09:16:07,208: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-23 09:16:08,516: INFO: data_ingestion: Downloading from https://raw.githubusercontent.com/suzzane123/End-to-end-MLProject/main/winequality-data.zip...]
+[2025-08-23 09:16:09,271: INFO: data_ingestion: Downloaded file: artifacts/data_ingestion/data.zip with info :
+Connection: close
+Content-Length: 25093
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "fd4f43889c8741f70f683ff3b8d4fe3799d56cea8bc37ceb36e249f874d65878"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 6A23:2F7236:209E8:90398:68A935FC
+Accept-Ranges: bytes
+Date: Sat, 23 Aug 2025 03:31:09 GMT
+Via: 1.1 varnish
+X-Served-By: cache-del21724-DEL
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1755919869.998441,VS0,VE231
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 309d255c0eeb27c7d4a1dc1cbbb229e46c57d0aa
+Expires: Sat, 23 Aug 2025 03:36:09 GMT
+Source-Age: 0
+
+]
+[2025-08-23 09:16:09,276: INFO: data_ingestion: Extracted zip file to artifacts/data_ingestion]
+[2025-08-23 09:16:09,277: INFO: stage_01_data_ingestion: Data Ingestion stage completed successfully.]
+[2025-08-23 09:16:09,277: INFO: main: Data Ingestion stage completed successfully.]
+[2025-08-23 09:16:09,277: INFO: main: >>>>> stageData Validation stage started <<<<<]
+[2025-08-23 09:16:09,278: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-23 09:16:09,278: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-23 09:16:09,279: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-23 09:16:09,279: INFO: common: created directory at: artifacts]
+[2025-08-23 09:16:09,280: ERROR: main: "'ConfigBox' object has no attribute 'colums'"]
+Traceback (most recent call last):
+  File "box/box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'COLUMS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 633, in box.box.Box.__getattr__
+  File "box/box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'COLUMS'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'COLUMS'. Did you mean: 'COLUMNS'?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'COLUMS'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'colums'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 633, in box.box.Box.__getattr__
+  File "box/box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'colums'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'colums'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/main.py", line 22, in <module>
+    data_ingestion.main()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/pipeline/stage_02_data_validation.py", line 11, in main
+    data_validation_config = config.get_data_validation_config()
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/config/configuration.py", line 30, in get_data_validation_config
+    schema = self.schema.COLUMS
+             ^^^^^^^^^^^^^^^^^^
+  File "box/config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'colums'". Did you mean: 'COLUMNS'?

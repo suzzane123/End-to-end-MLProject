@@ -14,7 +14,7 @@ class DataIngestionConfig:
 
 class DataValidationConfig:
     root_dir: Path
-    status_file: str
+    STATUS_FILE: str
     unzip_data_dir: Path
     all_schema: dict
 

@@ -55,3 +55,60 @@ Traceback (most recent call last):
        all_schema=schema
     )
 TypeError: DataValidationConfig.__init__() got an unexpected keyword argument 'STATUS_FILE'
+[2025-08-23 09:36:02,395: INFO: main: Data Ingestion stage started.]
+[2025-08-23 09:36:02,396: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-23 09:36:02,397: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-23 09:36:02,398: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-23 09:36:02,399: INFO: common: created directory at: artifacts]
+[2025-08-23 09:36:02,399: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-23 09:36:04,775: INFO: data_ingestion: Downloading from https://raw.githubusercontent.com/suzzane123/End-to-end-MLProject/main/winequality-data.zip...]
+[2025-08-23 09:36:09,719: INFO: data_ingestion: Downloaded file: artifacts/data_ingestion/data.zip with info :
+Connection: close
+Content-Length: 25093
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "fd4f43889c8741f70f683ff3b8d4fe3799d56cea8bc37ceb36e249f874d65878"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 6A23:2F7236:209E8:90398:68A935FC
+Accept-Ranges: bytes
+Date: Sat, 23 Aug 2025 03:51:09 GMT
+Via: 1.1 varnish
+X-Served-By: cache-del21733-DEL
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1755921069.086308,VS0,VE250
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 5fc1d01845ededd57165867dad5beea007c8bec1
+Expires: Sat, 23 Aug 2025 03:56:09 GMT
+Source-Age: 0
+
+]
+[2025-08-23 09:36:09,727: INFO: data_ingestion: Extracted zip file to artifacts/data_ingestion]
+[2025-08-23 09:36:09,728: INFO: stage_01_data_ingestion: Data Ingestion stage completed successfully.]
+[2025-08-23 09:36:09,728: INFO: main: Data Ingestion stage completed successfully.]
+[2025-08-23 09:36:09,728: INFO: main: >>>>> stageData Validation stage started <<<<<]
+[2025-08-23 09:36:09,731: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-23 09:36:09,732: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-23 09:36:09,734: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-23 09:36:09,735: INFO: common: created directory at: artifacts]
+[2025-08-23 09:36:09,735: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-23 09:36:09,735: ERROR: main: DataValidationConfig.__init__() got an unexpected keyword argument 'STATUS_FILE']
+Traceback (most recent call last):
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/main.py", line 22, in <module>
+    data_ingestion.main()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/pipeline/stage_02_data_validation.py", line 11, in main
+    data_validation_config = config.get_data_validation_config()
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/config/configuration.py", line 33, in get_data_validation_config
+    data_validation_config = DataValidationConfig(
+       root_dir=Path(config.root_dir),
+    ...<2 lines>...
+       all_schema=schema
+    )
+TypeError: DataValidationConfig.__init__() got an unexpected keyword argument 'STATUS_FILE'

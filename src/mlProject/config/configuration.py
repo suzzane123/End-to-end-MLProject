@@ -32,7 +32,7 @@ class ConfigurationManager:
 
          data_validation_config = DataValidationConfig(
             root_dir=Path(config.root_dir),
-            status_file=config.status_file,
+            STATUS_FILE =config.STATUS_FILE,
             unzip_data_dir=Path(config.unzip_data_dir),
             all_schema=schema
          )

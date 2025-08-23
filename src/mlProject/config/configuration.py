@@ -31,9 +31,9 @@ class ConfigurationManager:
          create_directories([config.root_dir])
 
          data_validation_config = DataValidationConfig(
-            root_dir=config.root_dir,
+            root_dir=Path(config.root_dir),
             STATUS_FILE =config.STATUS_FILE,
-            unzip_data_dir=config.unzip_data_dir,
+            unzip_data_dir=Path(config.unzip_data_dir),
             all_schema=schema,
          )
          return data_validation_config          
@@ -43,7 +43,7 @@ class ConfigurationManager:
          create_directories([config.root_dir])
 
          data_transformation_config = DataTransformationConfig(
-            root_dir = config.root_dir,
-            data_path = config.data_path,
+            root_dir = Path(config.root_dir),
+            data_path = Path(config.data_path),
          )
          return data_transformation_config

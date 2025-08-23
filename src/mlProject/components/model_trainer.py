@@ -3,10 +3,11 @@ import os
 from mlProject import logger
 from sklearn.linear_model import ElasticNet
 import joblib
+from mlProject.entity.config_entity import ModelTrainerConfig
 
 
 class ModelTrainer:
-    def __init__(self, config):
+    def __init__(self, config:ModelTrainerConfig):
         self.config = config
         logger.info(f"ModelTrainer initialized with config: {self.config}")
 

@@ -1,7 +1,7 @@
 from mlProject.components.model_trainer import ModelTrainer
 from mlProject.config.configuration import ConfigurationManager
 from mlProject import logger
-from pathlib import Path
+
 
 class ModelTrainingPipeline:
     def __init__(self):
@@ -20,10 +20,10 @@ class ModelTrainingPipeline:
         
 if __name__ == "__main__":
     try:
-        logger.info(">>>>> stage_04_model_training started <<<<<")
-        model_training_pipeline = ModelTrainingPipeline()
-        model_training_pipeline.main()
-        logger.info(">>>>> stage_04_model_training completed <<<<<")
+        logger.info("Model Training Pipeline started")
+        obj = ModelTrainingPipeline()
+        obj.main()
+        logger.info("Model Training Pipeline completed successfully")
     except Exception as e:
-        logger.exception(e)
+        logger.exception(f"Error in Model Training Pipeline: {e}")
         raise e

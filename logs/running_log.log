@@ -1,0 +1,75 @@
+[2025-08-23 11:17:27,350: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8081
+ * Running on http://192.168.1.10:8081]
+[2025-08-23 11:17:27,350: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-08-23 11:17:34,867: INFO: _internal: 192.168.1.10 - - [23/Aug/2025 11:17:34] "GET / HTTP/1.1" 200 -]
+[2025-08-23 11:17:34,898: INFO: _internal: 192.168.1.10 - - [23/Aug/2025 11:17:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2025-08-23 11:17:47,889: INFO: main: Data Ingestion stage started.]
+[2025-08-23 11:17:47,891: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-23 11:17:47,892: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-23 11:17:47,893: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-23 11:17:47,893: INFO: common: created directory at: artifacts]
+[2025-08-23 11:17:47,894: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-23 11:18:52,191: INFO: data_ingestion: Downloading from https://raw.githubusercontent.com/suzzane123/End-to-end-MLProject/main/winequality-data.zip...]
+[2025-08-23 11:18:52,948: INFO: data_ingestion: Downloaded file: artifacts/data_ingestion/data.zip with info :
+Connection: close
+Content-Length: 25093
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "fd4f43889c8741f70f683ff3b8d4fe3799d56cea8bc37ceb36e249f874d65878"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 6A23:2F7236:209E8:90398:68A935FC
+Accept-Ranges: bytes
+Date: Sat, 23 Aug 2025 05:33:52 GMT
+Via: 1.1 varnish
+X-Served-By: cache-del21729-DEL
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1755927233.699932,VS0,VE222
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 01c1466cf368b60d736da5120ae8f2eb76792aec
+Expires: Sat, 23 Aug 2025 05:38:52 GMT
+Source-Age: 0
+
+]
+[2025-08-23 11:18:52,958: INFO: data_ingestion: Extracted zip file to artifacts/data_ingestion]
+[2025-08-23 11:18:52,959: INFO: stage_01_data_ingestion: Data Ingestion stage completed successfully.]
+[2025-08-23 11:18:52,959: INFO: main: Data Ingestion stage completed successfully.]
+[2025-08-23 11:18:52,959: INFO: main: >>>>> stageData Validation stage started <<<<<]
+[2025-08-23 11:18:52,963: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-23 11:18:52,965: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-23 11:18:52,967: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-23 11:18:52,968: INFO: common: created directory at: artifacts]
+[2025-08-23 11:18:52,968: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-23 11:18:52,970: INFO: data_validation: DataValidation initialized with config: DataValidationConfig(root_dir=PosixPath('artifacts/data_validation'), STATUS_FILE='artifacts/data_validation/status.txt', unzip_data_dir=PosixPath('artifacts/data_ingestion/winequality-red.csv'), all_schema=ConfigBox({'fixed acidity': 'float64', 'volatile acidity': 'float64', 'citric acid': 'float64', 'residual sugar': 'float64', 'chlorides': 'float64', 'free sulfur dioxide': 'float64', 'total sulfur dioxide': 'float64', 'density': 'float64', 'pH': 'float64', 'sulphates': 'float64', 'alcohol': 'float64', 'quality': 'int64'}))]
+[2025-08-23 11:18:52,986: INFO: main: >>>>> stageData Validation stage completed <<<<<]
+[2025-08-23 11:18:52,986: INFO: main: >>>>>> stageData Transformation stage started <<<<<]
+[2025-08-23 11:18:52,989: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-23 11:18:52,990: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-23 11:18:52,991: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-23 11:18:52,992: INFO: common: created directory at: artifacts]
+[2025-08-23 11:18:52,992: INFO: common: created directory at: artifacts/data_transformation]
+[2025-08-23 11:18:52,992: INFO: data_transformation: DataTransformation initialized with config: DataTransformationConfig(root_dir=PosixPath('artifacts/data_transformation'), data_path=PosixPath('artifacts/data_ingestion/winequality-red.csv'))]
+[2025-08-23 11:18:52,996: INFO: data_transformation: Starting train-test split]
+[2025-08-23 11:18:53,037: INFO: data_transformation: Splitted data into train and test sets]
+[2025-08-23 11:18:53,037: INFO: data_transformation: (1279, 12)]
+[2025-08-23 11:18:53,037: INFO: data_transformation: (320, 12)]
+[2025-08-23 11:18:53,037: INFO: main: >>>>>> stageData Transformation stage completed <<<<<]
+[2025-08-23 11:18:53,037: INFO: main: >>>>>> stageModel Training stage started <<<<<]
+[2025-08-23 11:18:53,039: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-23 11:18:53,039: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-23 11:18:53,040: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-23 11:18:53,040: INFO: common: created directory at: artifacts]
+[2025-08-23 11:18:53,041: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-23 11:18:53,041: INFO: model_trainer: ModelTrainer initialized with config: ModelTrainerConfig(root_dir=PosixPath('artifacts/model_trainer'), train_data_path=PosixPath('artifacts/data_transformation/train.csv'), test_data_path=PosixPath('artifacts/data_transformation/test.csv'), model_name='model.joblib', alpha=0.1, l1_ratio=0.5, target_column='quality')]
+[2025-08-23 11:18:53,054: INFO: model_trainer: Model trained and saved at artifacts/model_trainer/model.joblib]
+[2025-08-23 11:18:53,054: INFO: stage_04_model_training: Model trained and saved at: artifacts/model_trainer/model.joblib]
+[2025-08-23 11:18:53,054: INFO: main: >>>>>> stageModel Training stage completed <<<<<]
+[2025-08-23 11:18:53,186: INFO: _internal: 192.168.1.10 - - [23/Aug/2025 11:18:53] "GET /train HTTP/1.1" 200 -]

@@ -1,11 +1,11 @@
-[2025-08-23 09:22:01,804: INFO: main: Data Ingestion stage started.]
-[2025-08-23 09:22:01,805: INFO: common: yaml file: config/config.yaml loaded successfully]
-[2025-08-23 09:22:01,807: INFO: common: yaml file: params.yaml loaded successfully]
-[2025-08-23 09:22:01,808: INFO: common: yaml file: schema.yaml loaded successfully]
-[2025-08-23 09:22:01,808: INFO: common: created directory at: artifacts]
-[2025-08-23 09:22:01,809: INFO: common: created directory at: artifacts/data_ingestion]
-[2025-08-23 09:22:06,316: INFO: data_ingestion: Downloading from https://raw.githubusercontent.com/suzzane123/End-to-end-MLProject/main/winequality-data.zip...]
-[2025-08-23 09:22:10,470: INFO: data_ingestion: Downloaded file: artifacts/data_ingestion/data.zip with info :
+[2025-08-23 09:28:58,513: INFO: main: Data Ingestion stage started.]
+[2025-08-23 09:28:58,515: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-23 09:28:58,515: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-23 09:28:58,517: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-23 09:28:58,517: INFO: common: created directory at: artifacts]
+[2025-08-23 09:28:58,517: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-23 09:29:03,434: INFO: data_ingestion: Downloading from https://raw.githubusercontent.com/suzzane123/End-to-end-MLProject/main/winequality-data.zip...]
+[2025-08-23 09:29:04,743: INFO: data_ingestion: Downloaded file: artifacts/data_ingestion/data.zip with info :
 Connection: close
 Content-Length: 25093
 Cache-Control: max-age=300
@@ -18,84 +18,40 @@ X-Frame-Options: deny
 X-XSS-Protection: 1; mode=block
 X-GitHub-Request-Id: 6A23:2F7236:209E8:90398:68A935FC
 Accept-Ranges: bytes
-Date: Sat, 23 Aug 2025 03:37:10 GMT
+Date: Sat, 23 Aug 2025 03:44:04 GMT
 Via: 1.1 varnish
-X-Served-By: cache-del21723-DEL
+X-Served-By: cache-del21744-DEL
 X-Cache: HIT
 X-Cache-Hits: 0
-X-Timer: S1755920230.143027,VS0,VE229
+X-Timer: S1755920644.382556,VS0,VE242
 Vary: Authorization,Accept-Encoding
 Access-Control-Allow-Origin: *
 Cross-Origin-Resource-Policy: cross-origin
-X-Fastly-Request-ID: 00971e38905527ebb1a3b65f90e42cd417e54403
-Expires: Sat, 23 Aug 2025 03:42:10 GMT
+X-Fastly-Request-ID: a7df70aab6d9355557444f3f2315efd0f456b096
+Expires: Sat, 23 Aug 2025 03:49:04 GMT
 Source-Age: 0
 
 ]
-[2025-08-23 09:22:10,479: INFO: data_ingestion: Extracted zip file to artifacts/data_ingestion]
-[2025-08-23 09:22:10,479: INFO: stage_01_data_ingestion: Data Ingestion stage completed successfully.]
-[2025-08-23 09:22:10,480: INFO: main: Data Ingestion stage completed successfully.]
-[2025-08-23 09:22:10,480: INFO: main: >>>>> stageData Validation stage started <<<<<]
-[2025-08-23 09:22:10,482: INFO: common: yaml file: config/config.yaml loaded successfully]
-[2025-08-23 09:22:10,483: INFO: common: yaml file: params.yaml loaded successfully]
-[2025-08-23 09:22:10,485: INFO: common: yaml file: schema.yaml loaded successfully]
-[2025-08-23 09:22:10,486: INFO: common: created directory at: artifacts]
-[2025-08-23 09:22:10,486: INFO: common: created directory at: artifacts/data_validation]
-[2025-08-23 09:22:10,487: ERROR: main: "'ConfigBox' object has no attribute 'status_file'"]
-Traceback (most recent call last):
-  File "box/box.py", line 594, in box.box.Box.__getitem__
-KeyError: 'status_file'
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "box/box.py", line 633, in box.box.Box.__getattr__
-  File "box/box.py", line 621, in box.box.Box.__getitem__
-box.exceptions.BoxKeyError: "'status_file'"
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "box/box.py", line 635, in box.box.Box.__getattr__
-AttributeError: 'ConfigBox' object has no attribute 'status_file'
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "box/config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
-  File "box/box.py", line 649, in box.box.Box.__getattr__
-box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'status_file'"
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "box/box.py", line 594, in box.box.Box.__getitem__
-KeyError: 'status_file'
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "box/box.py", line 633, in box.box.Box.__getattr__
-  File "box/box.py", line 621, in box.box.Box.__getitem__
-box.exceptions.BoxKeyError: "'status_file'"
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "box/box.py", line 635, in box.box.Box.__getattr__
-AttributeError: 'ConfigBox' object has no attribute 'status_file'
-
-The above exception was the direct cause of the following exception:
-
+[2025-08-23 09:29:04,753: INFO: data_ingestion: Extracted zip file to artifacts/data_ingestion]
+[2025-08-23 09:29:04,753: INFO: stage_01_data_ingestion: Data Ingestion stage completed successfully.]
+[2025-08-23 09:29:04,754: INFO: main: Data Ingestion stage completed successfully.]
+[2025-08-23 09:29:04,754: INFO: main: >>>>> stageData Validation stage started <<<<<]
+[2025-08-23 09:29:04,756: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-23 09:29:04,757: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-23 09:29:04,759: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-23 09:29:04,760: INFO: common: created directory at: artifacts]
+[2025-08-23 09:29:04,760: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-23 09:29:04,760: ERROR: main: DataValidationConfig.__init__() got an unexpected keyword argument 'STATUS_FILE']
 Traceback (most recent call last):
   File "/Users/sushantthapa/Desktop/End-to-end-MLProject/main.py", line 22, in <module>
     data_ingestion.main()
     ~~~~~~~~~~~~~~~~~~~^^
   File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/pipeline/stage_02_data_validation.py", line 11, in main
     data_validation_config = config.get_data_validation_config()
-  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/config/configuration.py", line 35, in get_data_validation_config
-    status_file=config.status_file,
-                ^^^^^^^^^^^^^^^^^^
-  File "box/config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
-  File "box/box.py", line 649, in box.box.Box.__getattr__
-box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'status_file'"
+  File "/Users/sushantthapa/Desktop/End-to-end-MLProject/src/mlProject/config/configuration.py", line 33, in get_data_validation_config
+    data_validation_config = DataValidationConfig(
+       root_dir=Path(config.root_dir),
+    ...<2 lines>...
+       all_schema=schema
+    )
+TypeError: DataValidationConfig.__init__() got an unexpected keyword argument 'STATUS_FILE'
